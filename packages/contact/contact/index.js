@@ -1,8 +1,8 @@
 require("dotenv").config();
 const path = require("path");
-const sendMail = require('./helper/send');
-const validation = require('./helper/validation');
-const messages = require('./helper/messages');
+const sendMail = require('../../../helper/send');
+const validation = require('../../../helper/validation');
+const messages = require('../../../helper/messages');
 //---------------
 
 module.exports.REQUIRED_FIELDS = ["name", "email", "subject", "message"];

@@ -1,0 +1,10 @@
+functions:
+- github:
+    branch: master
+    deploy_on_push: true
+    repo: Kozmonos/node-send-mail
+  name: contact
+  routes:
+  - path: /
+  source_dir: /
+name: contact
