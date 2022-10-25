@@ -1,0 +1,23 @@
+{
+  "name": "contact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "contact.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "nodemailer": "^6.8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
