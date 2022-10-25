@@ -1,4 +1,4 @@
-const { main } = require("../index");
+const { main } = require("../contact");
 const config = require('../helper/config');
 const {expect} = require('chai');
 

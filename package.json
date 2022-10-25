@@ -4,7 +4,7 @@
   "description": "",
   "main": "contact.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha 'packages/**/test/*.spec.js'"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
