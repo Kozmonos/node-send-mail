@@ -1,0 +1,13 @@
+on: push
+name: 🚀 Deploy function on push
+jobs:
+  deploy-function:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - name: Deploy function
+        run: doctl serverless deploy contact
