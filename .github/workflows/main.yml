@@ -9,5 +9,7 @@ jobs:
         uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - name: Deploy function install
+        run: doctl serverless install
       - name: Deploy function
         run: doctl serverless deploy contact
