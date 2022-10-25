@@ -23,9 +23,10 @@ module.exports=({name, email, subject, message}) =>
 		
 		try {
 			await transporter.sendMail(mailOption);
-			 	resolve(messages.send);
+			resolve(messages.send);
 		} catch (error) {
+			console.log(error)
 				reject(messages.not_send);
 		}
-
-	});
+	
+	});	

@@ -1,6 +1,8 @@
 test.js
-package-lock.json
-node_modules
-workspace
+**/package-lock.json
+**/node_modules
+**/workspace
 .vscode
-.env
+**/.env
+.deployed
+**/__deployer__.zip

@@ -1,10 +1,13 @@
-functions:
-- github:
-    branch: master
-    deploy_on_push: true
-    repo: Kozmonos/node-send-mail
+
+spec:
+ name: default
+ services:
+  functions:
+  - github:
+      branch: master
+      repo_clone_url: Kozmonos/node-send-mail
+    name: contact
+    routes:
+    - path: /
+    source_dir: /
   name: contact
-  routes:
-  - path: /
-  source_dir: /
-name: contact

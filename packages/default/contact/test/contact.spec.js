@@ -1,4 +1,5 @@
-const { REQUIRED_FIELDS,main } = require("../index");
+const { main } = require("../index");
+const config = require('../helper/config');
 const {expect} = require('chai');
 
 describe("Test App", () => {
@@ -10,7 +11,7 @@ describe("Test App", () => {
 
 			let response = await main({ name: "test_name" });
 
-			const missingFields = REQUIRED_FIELDS.filter((field) => !args[field]);
+			const missingFields = config.REQUIRED_FIELDS.filter((field) => !args[field]);
 			expect(response.message).equal(`Missing fields: ${missingFields.join(", ")}`);
 
   });

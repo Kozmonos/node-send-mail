@@ -1,6 +1,14 @@
 on: push
 name: 🚀 Deploy function on push
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests
+        run: npm test
   deploy-function:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
@@ -14,4 +22,4 @@ jobs:
       - name: Doctl connect function
         run: doctl serverless connect contact
       - name: Deploy function
-        run: doctl serverless deploy contact
+        run: doctl serverless deploy .

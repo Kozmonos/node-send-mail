@@ -1,13 +1,9 @@
 require("dotenv").config();
 const path = require("path");
-const sendMail = require('../../../helper/send');
-const validation = require('../../../helper/validation');
-const messages = require('../../../helper/messages');
-//---------------
-
-module.exports.REQUIRED_FIELDS = ["name", "email", "subject", "message"];
-
-//----------------
+const sendMail = require('./helper/send');
+const validation = require('./helper/validation');
+const messages = require('./helper/messages');
+const config = require('./helper/config');
 
 const returnResponse = (message)=>{
   return {
@@ -29,12 +25,14 @@ const validate = (args) =>
     resolve();
   });
 
+
 module.exports.main=async (args)=>{
 	try {
     await validate(args)
 
     //send mail
     const response = await sendMail(args);
+    console.log({response})
     return returnResponse(response);
 
 	} catch (error) {

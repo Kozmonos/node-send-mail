@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "contact.js",
-  "directories": {
-    "test": "test"
+  "scripts": {
+    "test": "mocha"
   },
   "dependencies": {
     "dotenv": "^16.0.3",

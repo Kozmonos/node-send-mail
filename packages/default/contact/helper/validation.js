@@ -1,7 +1,9 @@
+const config = require('./config');
+
 module.exports.fields= (args) => {
 
   return new Promise((resolve, reject) => {
-    const missingFields = this.REQUIRED_FIELDS.filter((field) => !args[field]);
+    const missingFields = config.REQUIRED_FIELDS.filter((field) => !args[field]);
     missingFields.length
       ? reject(`Missing fields: ${missingFields.join(", ")}`)
       : resolve()
